@@ -1,5 +1,7 @@
 # Veilid Terraform
 
+details at https://veilid.com/
+
 Running veilid nodes is super cool, and I wanted an easy way to do it across multiple regions in Digital Ocean, so depending on your appetite, you can spawn a bunch of these all over the place if you want.
 
 ## Running the command
