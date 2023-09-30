@@ -12,7 +12,7 @@ export DIGITALOCEAN_ACCESS_TOKEN=TOKEN_VALUE_HERE
 
 2. Add your public SSH key to the cloud-init script, in `setup-veilid.yaml` inside the ` ssh_authorized_keys:` block
 
-3. Decide which region(s) you want to run a veilid node in, and uncomment the relevant line(s) in the locals.regions block
+3. Decide which region(s) you want to run a veilid node in, and uncomment the relevant line(s) in the `locals.regions` block in `main.tf`
 
 4. then you can run the terraform command and get a/some shiny new node(s)!
 
