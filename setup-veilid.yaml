@@ -17,9 +17,9 @@ users:
       groups: users, admin
       lock_passwd: false
       ssh_authorized_keys:
-          # example:
-          # - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINp/xiLmPQCFC9eZEMb1IyVAwl/dScA2mdpF1FjZiJSH
-          - PASTE YOUR PUBLIC SSH KEY HERE
+        # put the value of the ssh-key you want to use here
+        # EXAMPLE:
+        #   - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPbnvhHn70pPJ0yrcR2waJRk5SZMgYt9Uku738hD42Jw
 
 # sets up veilid to run automatically
 runcmd:
