@@ -12,6 +12,10 @@ Each of the droplets here costs about $4/month, and since Digital Ocean doesn't 
 
 1. grab an access token at https://cloud.digitalocean.com/account/api/tokens, and then copy `.env.example` to `.env` and add the value of the token there.
 
+For scopes, select "Custom Scope" and give it all access for the droplets API (see screenshot below):
+
+![droplet scopes needed](droplet-scopes.png)
+
 2. Add your public SSH key to the cloud-init script, in `setup-veilid.yaml` inside the ` ssh_authorized_keys:` block
 
 3. Decide which region(s) you want to run a veilid node in, and uncomment the relevant line(s) in the `locals.regions` block in `main.tf`. As mentioned, not all regions support the smalles droplet size currently selected.
