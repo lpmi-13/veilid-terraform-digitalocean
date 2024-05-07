@@ -12,9 +12,9 @@ Each of the droplets here costs about $4/month, and since Digital Ocean doesn't 
 
 1. grab an access token at https://cloud.digitalocean.com/account/api/tokens, and then copy `.env.example` to `.env` and add the value of the token there.
 
-For scopes, select "Custom Scope" and give it all access for the droplets API (see screenshot below):
+For scopes, select "Custom Scopes" and give it all access for the Droplets and Firewalls API (see screenshot below):
 
-![droplet scopes needed](droplet-scopes.png)
+![scopes needed](scopes.png)
 
 2. Add your public SSH key to the cloud-init script, in `setup-veilid.yaml` inside the ` ssh_authorized_keys:` block
 
