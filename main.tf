@@ -23,12 +23,12 @@ locals {
     # "ams3", # Amsterdam
     # "sfo2", # San Francisco 2
     # "sfo3", # San Francisco 3
-    "sgp1", # Singapore
+    # "sgp1", # Singapore
     # "lon1", # London
     # "fra1", # Frankfurt
     # "tor1", # Toronto
     # "blr1", # Bangalore
-    # "syd1", # Sydney
+    "syd1", # Sydney
   ]
 }
 
