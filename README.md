@@ -8,7 +8,7 @@ Running veilid nodes is super cool, and I wanted an easy way to do it across mul
 
 Each of the droplets here costs about $4/month, and since Digital Ocean doesn't charge extra for IPv4 addresses in use, the default configuration is running dual-stack (IPv4/IPv6).
 
-## Running the command
+## Running the commands
 
 1. grab an access token at https://cloud.digitalocean.com/account/api/tokens, and then copy `.env.example` to `.env` and add the value of the token there.
 
