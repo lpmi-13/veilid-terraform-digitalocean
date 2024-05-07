@@ -42,3 +42,44 @@ resource "digitalocean_droplet" "veilid-node" {
   size      = "s-1vcpu-512mb-10gb"
   user_data = file("./setup-veilid.yaml")
 }
+
+resource "digitalocean_firewall" "veilid" {
+  name = "veilid-access"
+
+  droplet_ids = [for node in digitalocean_droplet.veilid-node : node.id]
+
+  inbound_rule {
+    protocol         = "tcp"
+    port_range       = "22"
+    source_addresses = ["0.0.0.0/0", "::/0"]
+  }
+
+  inbound_rule {
+    protocol         = "tcp"
+    port_range       = "5150"
+    source_addresses = ["0.0.0.0/0", "::/0"]
+  }
+
+  inbound_rule {
+    protocol         = "udp"
+    port_range       = "5150"
+    source_addresses = ["0.0.0.0/0", "::/0"]
+  }
+
+  outbound_rule {
+    protocol              = "icmp"
+    destination_addresses = ["0.0.0.0/0", "::/0"]
+  }
+
+  outbound_rule {
+    protocol              = "tcp"
+    destination_addresses = ["0.0.0.0/0", "::/0"]
+    port_range            = "all"
+  }
+
+  outbound_rule {
+    protocol              = "udp"
+    destination_addresses = ["0.0.0.0/0", "::/0"]
+    port_range            = "all"
+  }
+}
